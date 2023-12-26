@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.blueish{
+  color: rgb(100, 100, 249);
+}
