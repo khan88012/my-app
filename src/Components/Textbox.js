@@ -6,6 +6,10 @@ export default function Textbox(props) {
         let newText = text.toUpperCase();
         setText(newText);
     }
+    const handlLoClick = () =>{
+        let newText = text.toLowerCase();
+        setText(newText);
+    }
 
     const handleOnChange = (event) =>{
         setText(event.target.value);
@@ -24,6 +28,13 @@ export default function Textbox(props) {
         ></textarea>
       </div>
       <button className="btn btn-primary my-3" onClick={handleUpClick}> Convert To Uppercase</button>
+      <button className="btn btn-primary mx-3" onClick={handlLoClick}> Convert To Lowecase</button>
+
+      <h1>Text Summary</h1>
+      <p>{text.split(' ').length} words and {text.length} letters.</p>
+      <p>{0.008 * text.split(' ').length} minutes to read</p>
+      <h2>Preview</h2>
+      <p>{text}</p>
     </>
   );
 }
