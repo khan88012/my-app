@@ -5,10 +5,13 @@ export default function Textbox(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to Upper Case!!!!", "success");
   };
   const handlLoClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to Lower Case!!!!", "success");
+
   };
 
   const handleOnChange = (event) => {
